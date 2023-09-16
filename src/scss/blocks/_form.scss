@@ -1,0 +1,67 @@
+.form {
+    padding: 12px 16px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr 48px;
+    align-items: center;
+    gap: 16px;
+    border-radius: 16px;
+    border: 1px solid rgba(144, 144, 144, 0.3);
+
+    &__devider {
+        height: 24px;
+        width: 1px;
+        background-color: var(--text-muted);
+
+        @include mediaMobile {
+            display: none;
+        }
+    }
+
+	&__label {
+        padding-left: 36px;
+        display: grid;
+        gap: 8px;
+
+        background-image: url('../img/icons/map.svg');
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: auto;
+
+        &--date {
+            background-image: url('../img/icons/calendar.svg');
+        }
+
+        span {
+            font-weight: 500;
+            font-size: 16px;
+        }
+	}
+
+    &__input {
+        font-size: 14px;
+        font-weight: 500;
+
+        &::placeholder {
+            color: var(--text-muted);
+        }
+    }
+
+	&__btn {
+        padding: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        background-color: var(--accent);
+        transition: opacity .2s ease-in;
+
+        &:hover,
+        &:focus {
+            opacity: 0.7;
+        }
+	}
+
+    @include mediaMobile {
+        grid-template-columns: 1fr;
+    }
+}

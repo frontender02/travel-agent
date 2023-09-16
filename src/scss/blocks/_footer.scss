@@ -1,0 +1,46 @@
+.footer {
+	padding: 80px 0;
+	color: var(--text-white);
+	background-color: var(--text-color);
+
+	@include mediaMobile {
+		padding: 40px 0;
+	}
+
+	a {
+		color: var(--text-white);
+	}
+
+	&__row {
+		display: grid;
+		align-items: start;
+		grid-template-columns: 1fr 1fr;
+		gap: 128px;
+
+		@include mediaMobile {
+			grid-template-columns: 1fr;
+			gap: 60px;
+		}
+	}
+
+	&__copyright {
+		display: grid;
+		gap: 24px;
+	}
+	
+	&__copyright-text {
+		max-width: 300px;
+		line-height: 150%;
+	}
+
+	&__nav {
+		display: grid;
+		align-items: flex-start;
+		grid-template-columns: 1fr 1fr;
+		gap: 40px;
+
+		@include mediaMobile {
+			grid-row: -1 / 1;
+		}
+	}
+}

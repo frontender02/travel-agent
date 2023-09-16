@@ -1,0 +1,48 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+
+    &__logo {
+        flex-shrink: 0;
+    }
+
+	&__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+
+        a {
+            color: #181818;
+        }
+        a:hover,
+        a.active {
+            color: #35AFF4;
+        }
+
+        @include mediaMobile {
+            display: none;
+        }
+	}
+
+	&__btns {
+        display: flex;
+        gap: 12px;
+
+        @include mediaMobile {
+            display: none;
+        }
+	}
+
+    &__icon {
+	    display: none;
+
+        @include mediaMobile {
+            display: block;
+        }
+    }
+}
+
+// .logo {}
